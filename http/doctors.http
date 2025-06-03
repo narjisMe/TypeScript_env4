@@ -1,0 +1,35 @@
+# Get the list of doctors
+GET http://localhost:3000/doctors HTTP/1.1
+
+###
+# Get the doctor with id 1
+GET http://localhost:3000/doctors/1 HTTP/1.1
+
+
+###
+# create a doctor
+# The header
+POST http://localhost:3000/doctors/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Emma",
+  "lastName": "Goldman",
+  "speciality": "general practicien"
+}
+
+###
+# update a doctor
+PUT http://localhost:3000/doctors HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 4,
+  "firstName": "Emma",
+  "lastName": "Goldman",
+  "speciality": "pneumologist"
+}
+
+###
+# delete a doctor
+DELETE http://localhost:3000/doctors/1 HTTP/1.1
